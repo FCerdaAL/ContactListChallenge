@@ -29,9 +29,11 @@ class ContactAdapter(private var contactList: List<Contact>) :
     // Bind data to each item view
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val contact = contactList[position]
-    //    holder.tvName.text = contact.name
-    //    holder.tvPhone.text = contact.phone
-    //    holder.tvStatus.text = if (contact.isAvailable) "Available" else "Busy"
+
+        // Asignando datos a las vistas
+        holder.tvName.text = "Nombre: ${contact.name}"
+        holder.tvPhone.text = "Teléfono: ${contact.phone}"
+        holder.tvStatus.text = "Estado: ${if (contact.isAvailable) "True" else "False"}"
     }
 
     // Return the size of the contact list
